@@ -163,21 +163,21 @@ function student_logout() {
 function student_menu() {
     echo
     echo "Hostel Student Portal"
-    echo "1) register_student"
-    echo "2) student_login"
-    echo "3) view_available_rooms"
-    echo "4) apply_room"
-    echo "5) view_my_allocation"
-    echo "6) student_logout"
-    echo "7) exit"
+    echo "1) student_login"
+    echo "2) view_available_rooms"
+    echo "3) apply_room"
+    echo "4) view_my_allocation"
+    echo "5) student_logout"
+    echo "6) exit"
     echo -n "Choose an option: "
 }
 function main_menu() {
     echo
     echo "Welcome to Hostel Portal"
     echo "1) Admin Login"
-    echo "2) Student Login"
-    echo "3) Exit"
+    echo "2) Student Register"
+    echo "3) Student Login"
+    echo "4) Exit"
     echo -n "Choose option: "
 }
 
@@ -188,8 +188,9 @@ while true; do
         read choice
         case $choice in
             1) admin_login ;;
-            2) student_login ;;
-            3) echo "Bye!"; exit 0 ;;
+            2) register_student ;;
+            3) student_login ;;
+            4) echo "Bye!"; exit 0 ;;
             *) echo "Invalid choice." ;;
         esac
     else
@@ -209,13 +210,12 @@ while true; do
             student_menu
             read opt
             case $opt in
-                1) register_student ;;
-                2) student_login ;;
-                3) view_available_rooms ;;
-                4) apply_room ;;
-                5) view_my_allocation ;;
-                6) student_logout ;;
-                7) exit ;;
+                1) student_login ;;
+                2) view_available_rooms ;;
+                3) apply_room ;;
+                4) view_my_allocation ;;
+                5) student_logout ;;
+                6) exit ;;
                 *) echo "Invalid option" ;;
             esac
         fi
